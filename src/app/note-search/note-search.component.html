@@ -1,0 +1,43 @@
+<div class="sort-search-container">
+  <div>
+    <label for="searchTerm" class="search-label">Search: </label>
+    <input
+      type="text"
+      name="searchTerm"
+      id="searchTerm"
+      class="searchTerm"
+      value=""
+      (keyup)="search()"
+    />
+  </div>
+  <div>
+    <label for="sort-notes">Sort by: </label>
+    <select id="sort-notes" class="sort-notes" (change)="sort()">
+      <option value="date-new">Date added (newest)</option>
+      <option value="date-old">Date added (oldest)</option>
+      <option value="aToZ">Alphabetically (A-Z)</option>
+      <option value="zToA">Alphabetically (Z-A)</option>
+    </select>
+  </div>
+</div>
+<div class="note-list-container" *ngFor="let note of noteList">
+  <div *ngIf="note.title">
+    <a [routerLink]="['/notes', note.id]">
+      <div class="note-body">
+        <h2>
+          <a [title]="note.title" [routerLink]="['/notes', note.id]">{{
+            note.title
+          }}</a>
+        </h2>
+        <p class="note-date">{{ note.date | date }}</p>
+        <p>{{ note.body }}</p>
+      </div>
+    </a>
+    <div class="button-container">
+      <button class="button" [routerLink]="['/notes', note.id, 'edit']">
+        Edit
+      </button>
+      <button class="button" (click)="delete(note.id)">Delete</button>
+    </div>
+  </div>
+</div>

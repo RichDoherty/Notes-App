@@ -1,0 +1,63 @@
+.note-list-container {
+  margin: 0.5em auto;
+  padding: 1em;
+  border-radius: 1em;
+  transition: background-color 0.2s ease-in;
+}
+
+.note-list-container:hover {
+  background-color: #a85ad42c;
+  border-radius: 1em;
+  transition: background-color 0.2s ease-out;
+}
+
+.note-body {
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+h2 {
+  display: inline;
+  margin-right: 2em;
+}
+
+.note-date {
+}
+
+.button {
+  padding: 1;
+  line-height: 1;
+}
+
+.sort-search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5em;
+}
+
+.sort-notes {
+  display: inline-flex;
+  padding: 0.5em;
+  background-color: #eee;
+  color: #6a0aa1;
+  border: 1px solid#999;
+  border-radius: 0.5em;
+  box-shadow: 4px 4px #ccc;
+  font-weight: bold;
+}
+
+.search-label {
+  display: inline-flex;
+}
+
+.searchTerm {
+  margin: 0.5em;
+}

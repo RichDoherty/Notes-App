@@ -1,0 +1,10 @@
+.note-container {
+  padding: 0px 16px;
+}
+
+@media screen and (min-width: 1200px) {
+  .note-container {
+    width: 50%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,31 @@
+<div class="note-create-container">
+  <form [formGroup]="noteForm" (ngSubmit)="addNote()">
+    <p>Title:</p>
+    <input
+      type="text"
+      name="title"
+      id="note-title"
+      placeholder="Enter title here"
+      formControlName="title"
+      required
+    />
+    <p>Date:</p>
+    <input
+      type="date"
+      name="date"
+      (change)="SendDataonChange($event)"
+      formControlName="date"
+    />
+    <p>Note:</p>
+    <textarea
+      type="text"
+      name="body"
+      class="note-input"
+      formControlName="body"
+    ></textarea>
+    <div>
+      <button class="button" type="submit">Add Note</button>
+      <p id="save-check-mark" class="save-check">&#x2713; Saved</p>
+    </div>
+  </form>
+</div>

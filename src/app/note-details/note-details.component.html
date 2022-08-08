@@ -1,0 +1,7 @@
+<div *ngIf="note">
+  <h2>
+    <a [title]="note.title">{{ note.title }}</a>
+  </h2>
+  <p class="noteDate">{{ note.date }}</p>
+  <p>{{ note.body }}</p>
+</div>

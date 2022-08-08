@@ -1,0 +1,23 @@
+.headerContainer {
+  background-color: #6a0aa1;
+  width: 100%;
+  height: 68px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto', Arial, sans-serif;
+  border-radius: 1em;
+}
+
+.header {
+  margin: 0;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+h3 {
+  font-size: 16px;
+}
